@@ -1,4 +1,4 @@
-# "Object Library"
+# Static Library
 Demonstrates creating a dependency on a static library consisting of C code/headers.
 
 This example, once added as a dependency in a top level package's `build.zig.zon`, would be added as follows to `build.zig`:
