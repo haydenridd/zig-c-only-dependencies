@@ -2,16 +2,17 @@
     .name = "build_system_demo",
     .version = "0.0.0",
     .dependencies = .{
-        .subproj = .{
-            .path = "subproj",
+        .objlib = .{
+            .path = "object_library",
+        },
+        .staticlib = .{
+            .path = "static_library",
         },
     },
     .paths = .{
         "build.zig",
         "build.zig.zon",
         "src",
-        // For example...
-        //"LICENSE",
-        //"README.md",
+        "README.md",
     },
 }

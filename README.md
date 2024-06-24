@@ -1,6 +1,9 @@
-# C Only "Sub Projects" Using Zig's Build System
+# C Projects with Zig's Build System
 
-Might grow into a larger repo for examples eventually but currently just demonstrates:
-- A method of including a local "sub-project" using Zig's package manager that contains only C sources/headers
-- `addObject()` is used instead of a static library to try to emulate CMake's "Object Libraries"
-- Sadly, it fails to compile if the headers from this "sub-project" are needed
+A pile of "TODO:" on docs, but for now demonstrates:
+- Adding a local dependency on a C-only static library
+- Adding a local dependency on a C-only "object library" in the style of CMake's [object library]()
+
+# Wishlist
+- Local dependency on mixed Zig/C code that exposes a zig "module"
+- Local dependency on mixed Zig/C code that exposes a zig "module" + creates a static library (neccessary?)

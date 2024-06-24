@@ -9,8 +9,11 @@ pub fn build(b: *std.Build) void {
         "src/main.c",
     } });
 
-    const subproj_obj = b.dependency("subproj", .{}).artifact("subproj");
-    exe.addObject(subproj_obj);
+    const object_lib = b.dependency("objlib", .{ .target = target, .optimize = optimize }).artifact("objlib");
+    exe.addObject(object_lib);
+
+    const static_lib = b.dependency("staticlib", .{ .target = target, .optimize = optimize }).artifact("staticlib");
+    exe.linkLibrary(static_lib);
 
     b.installArtifact(exe);
     const run_cmd = b.addRunArtifact(exe);

@@ -1,6 +1,6 @@
-#include "subproj.h"
+#include "objlib.h"
 
-int subFunction()
+int objLibFunc()
 {
 #ifdef ENABLED_FLAG
     return 10;
